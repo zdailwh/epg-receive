@@ -125,7 +125,7 @@ export default {
 /* Detail see https://github.com/PanJiaChen/vue-element-admin/pull/927 */
 
 $bg:#283443;
-$light_gray:#fff;
+$light_gray:#555;
 $cursor: #fff;
 
 @supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
@@ -168,9 +168,9 @@ $cursor: #fff;
 </style>
 
 <style lang="scss" scoped>
-$bg:#2d3a4b;
+$bg:#fef5eb;
 $dark_gray:#889aa4;
-$light_gray:#eee;
+$light_gray:#795547;
 
 .login-container {
   min-height: 100%;
