@@ -16,3 +16,7 @@
 .handler-wrap .el-button {
   margin-left: 10px;
 }
+.el-button--danger {
+  background-color: #ce0502 !important;
+  border-color: #ce0502 !important;
+}
