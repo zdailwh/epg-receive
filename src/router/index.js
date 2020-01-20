@@ -102,6 +102,19 @@ export const constantRoutes = [
   },
 
   {
+    path: '/receptions',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Receptions',
+        component: () => import('@/views/receptions/index'),
+        meta: { title: '接收数据管理', icon: 'table' }
+      }
+    ]
+  },
+
+  {
     path: '/user',
     component: Layout,
     meta: { title: '用户管理', icon: 'user' },

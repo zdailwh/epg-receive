@@ -6,13 +6,15 @@ import authentication from './authentication'
 import configs from './configs'
 import whiteips from './whiteips'
 import providers from './providers'
+import receptions from './receptions'
 
 const mocks = [
   ...users,
   ...authentication,
   ...configs,
   ...whiteips,
-  ...providers
+  ...providers,
+  ...receptions
 ]
 
 // for front mock
