@@ -73,9 +73,9 @@
           {{ scope.row.update_time }}
         </template>
       </el-table-column>
-      <el-table-column label="机构" width="600">
+      <el-table-column type="expand" label="关联项详情" width="56">
         <template slot-scope="scope">
-          {{ scope.row.provider }}
+          <p>机构：{{ scope.row.provider }}</p>
         </template>
       </el-table-column>
     </el-table>

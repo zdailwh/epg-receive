@@ -56,11 +56,6 @@
           {{ scope.row.ip }}
         </template>
       </el-table-column>
-      <el-table-column label="机构" width="600">
-        <template slot-scope="scope">
-          {{ scope.row.provider }}
-        </template>
-      </el-table-column>
       <el-table-column label="状态">
         <template slot-scope="scope">
           {{ scope.row.statusstr }}
@@ -74,6 +69,11 @@
       <el-table-column label="更新时间">
         <template slot-scope="scope">
           {{ scope.row.update_time }}
+        </template>
+      </el-table-column>
+      <el-table-column type="expand" label="关联项详情" width="56">
+        <template slot-scope="scope">
+          <p>机构：{{ scope.row.provider }}</p>
         </template>
       </el-table-column>
       <el-table-column class-name="status-col" label="操作" align="center">

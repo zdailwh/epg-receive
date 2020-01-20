@@ -59,6 +59,7 @@ export default {
               message: '创建成功！',
               type: 'success'
             })
+            this.$router.push({ path: '/providers/' + this.providerId + '/whiteips' })
           }).catch(error => {
             console.log(error)
             this.listLoading = false
