@@ -9,3 +9,9 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 .sidebar-container .el-submenu .el-menu-item.is-active:hover {
   color: #fff !important;
 }
+.sidebar-container .submenu-title-noDropdown:hover, .sidebar-container .el-submenu__title:hover {
+  color: #fff !important;
+}
+.el-submenu__title i {
+  color: #fff;
+}

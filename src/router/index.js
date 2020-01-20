@@ -115,6 +115,19 @@ export const constantRoutes = [
   },
 
   {
+    path: '/epgs',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Epgs',
+        component: () => import('@/views/epgs/index'),
+        meta: { title: 'EPG信息管理', icon: 'table' }
+      }
+    ]
+  },
+
+  {
     path: '/user',
     component: Layout,
     meta: { title: '用户管理', icon: 'user' },

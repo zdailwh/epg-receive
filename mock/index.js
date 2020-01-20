@@ -7,6 +7,7 @@ import configs from './configs'
 import whiteips from './whiteips'
 import providers from './providers'
 import receptions from './receptions'
+import epgs from './epgs'
 
 const mocks = [
   ...users,
@@ -14,7 +15,8 @@ const mocks = [
   ...configs,
   ...whiteips,
   ...providers,
-  ...receptions
+  ...receptions,
+  ...epgs
 ]
 
 // for front mock
