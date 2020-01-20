@@ -46,13 +46,59 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
-    children: [{
-      path: 'dashboard',
-      name: 'Dashboard',
-      component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
-    }]
+    redirect: '/config/configs'
+  },
+
+  // {
+  //   path: '/',
+  //   component: Layout,
+  //   redirect: '/dashboard',
+  //   children: [{
+  //     path: 'dashboard',
+  //     name: 'Dashboard',
+  //     component: () => import('@/views/dashboard/index'),
+  //     meta: { title: 'Dashboard', icon: 'dashboard' }
+  //   }]
+  // },
+
+  {
+    path: '/config',
+    component: Layout,
+    meta: { title: '参数配置', icon: 'table' },
+    children: [
+      {
+        path: 'configs',
+        name: 'Configs',
+        component: () => import('@/views/configs/index'),
+        meta: { title: '文件路径配置', icon: 'table' }
+      },
+      {
+        path: 'whiteips',
+        name: 'Whiteips',
+        component: () => import('@/views/whiteips/index'),
+        meta: { title: 'IP白名单列表', icon: 'table' }
+      }
+    ]
+  },
+
+  {
+    path: '/providers',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Providers',
+        component: () => import('@/views/providers/index'),
+        meta: { title: '数据提供机构', icon: 'table' }
+      },
+      {
+        path: ':providerid/whiteips',
+        name: 'WhiteipsOfProvider',
+        component: () => import('@/views/whiteips/index'),
+        meta: { title: '查询白名单', icon: 'table' },
+        hidden: true
+      }
+    ]
   },
 
   {

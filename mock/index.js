@@ -3,10 +3,16 @@ import { param2Obj } from '../src/utils'
 
 import users from './users'
 import authentication from './authentication'
+import configs from './configs'
+import whiteips from './whiteips'
+import providers from './providers'
 
 const mocks = [
   ...users,
-  ...authentication
+  ...authentication,
+  ...configs,
+  ...whiteips,
+  ...providers
 ]
 
 // for front mock
