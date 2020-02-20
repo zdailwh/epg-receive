@@ -72,7 +72,14 @@
       </el-table-column>
       <el-table-column label="AppSecret">
         <template slot-scope="scope">
-          {{ scope.row.appsecret }}
+          <el-popover
+            placement="top-start"
+            width="200"
+            trigger="hover"
+            :content="scope.row.appsecret"
+          >
+            <el-button slot="reference" size="small">查看</el-button>
+          </el-popover>
         </template>
       </el-table-column>
       <el-table-column label="状态">
@@ -97,7 +104,9 @@
             <el-button v-if="scope.row.status !== 0" type="danger" size="mini" @click="doFrozen(scope.$index, scope.row)">冻结</el-button>
             <el-button size="mini" @click="$refs.addip.providerId = scope.row.id;$refs.addip.dialogVisible = true;">创建白名单</el-button>
             <br>
-            <router-link :to="'/providers/' + scope.row.id + '/whiteips'">查询白名单</router-link>
+            <el-button type="text" size="mini">
+              <router-link :to="'/providers/' + scope.row.id + '/whiteips'">查询白名单</router-link>
+            </el-button>
           </div>
         </template>
       </el-table-column>

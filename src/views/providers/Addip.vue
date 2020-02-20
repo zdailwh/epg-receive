@@ -8,7 +8,7 @@
     <div class="dialog-body">
       <el-form ref="formData" :model="formData" :rules="rules" label-width="120px">
         <el-form-item label="IP地址" prop="ip">
-          <el-input v-model="formData.ip" placeholder="15位，如：127.0.0.0" />
+          <el-input v-model="formData.ip" placeholder="如：127.0.0.0" />
         </el-form-item>
       </el-form>
     </div>
