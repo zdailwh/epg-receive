@@ -53,7 +53,7 @@
     <el-table
       v-loading="listLoading"
       :data="list"
-      element-loading-text="Loading"
+      element-loading-text="加载中"
       fit
       highlight-current-row
       size="small"
